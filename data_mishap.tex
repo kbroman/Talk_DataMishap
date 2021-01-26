@@ -1,4 +1,4 @@
-\documentclass[aspectratio=169,12pt,t]{beamer}
+\documentclass[12pt,t]{beamer}
 \usepackage{graphicx}
 \setbeameroption{hide notes}
 \setbeamertemplate{note page}[plain]
@@ -12,7 +12,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % title info
-\title{Model misspecification}
+\title{A data mishap}
 \subtitle{Estimating allele frequencies in sibships}
 \author{\href{https://kbroman.org}{Karl Broman}}
 \institute{Biostatistics \& Medical Informatics, UW{\textendash}Madison}
@@ -35,35 +35,50 @@
   \titlepage
 
 \note{
-  This lecture concerns an old problem in human genetics. The main
-  topic is about estimating allele frequencies with data on correlated
-  individuals (siblings), but really about a case study in recognizing
-  and diagnosing problems, evaluating the relative quality of
-  different estimates, and on trade-offs between extracting full
-  information vs just getting reasonable answers.
 }
 
 } }
 
 
-\begin{frame}[c]{Mapping disease genes}
+\begin{frame}{GWAS for ``{\hilit morning person}''}
 
-  \centering
-  \Large
+  \bigskip
+  \bigskip
 
-  Look for genomic regions where \hspace*{20mm} \\[18pt]
+\figh{Figs/GWAS_morning_person.jpeg}{0.6}
 
-  individuals with {\hilit similar phenotypes}
+  \bigskip
+  \bigskip
 
-  also have {\hilit similar genotypes}
+\vfill
+\hfill \footnotesize {\lolit Hu et al (2016)
+  \href{https://doi.org/10.1038/ncomms10448}{doi:10.1038/ncomms10448}}
 
 \note{
-   Our interest here is in mapping disease genes in humans. Mapping
-   disease genes is, in essence, about finding genomic regions where
-   individuals with similar phenotypes also have similar genotypes.
 }
 
 \end{frame}
+
+
+
+
+\begin{frame}{BRCA pedigree}
+
+  \bigskip
+
+\figh{Figs/brca_family.png}{0.7}
+
+\vfill
+\hfill \footnotesize {\lolit Hall et al (1990)
+  \href{https://doi.org/10.1126/science.2270482}{doi:10.1126/science.2270482}}
+
+\note{
+}
+
+\end{frame}
+
+
+
 
 
 \begin{frame}[c]{Affected sib pairs}
@@ -112,8 +127,11 @@ non-inbred sibs are IBD = 0, 1, 2
 
 \end{frame}
 
-\begin{frame}[c]{Prostate cancer genome scan}
-\figw{Figs/gh_results_bad.pdf}{1.0}
+\begin{frame}{Prostate cancer genome scan}
+
+\bigskip
+
+\figh{Figs/gh_results_bad.pdf}{0.75}
 
 \note{
   In an affected sib-pair study, we'll scan across the genome; at each
@@ -130,6 +148,21 @@ non-inbred sibs are IBD = 0, 1, 2
 }
 
 \end{frame}
+
+
+\begin{frame}{}
+
+  \vspace*{-0.5in} \hspace*{-1.0in}
+
+\figh{Figs/moustache.jpeg}{1.12}
+
+\vspace*{-0.5in}
+\hfill
+{\large \color{white} so happy} \hspace*{0.2in}
+
+\end{frame}
+
+
 
 \begin{frame}[c]{Lesson}
 
