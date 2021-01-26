@@ -12,3 +12,10 @@ Breast cancer pedigrees
 Hall et al (1990) Science <https://doi.org/10.1126/science.2270482>
 
 <https://njc.rockefeller.edu/pdf4/Class8-King1990.pdf>
+
+
+---
+
+moustache karl
+
+<https://www.biostat.wisc.edu/~kbroman/pictures/moustache.jpg>
