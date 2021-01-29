@@ -79,16 +79,16 @@ plot(0, 0, type="n", xlab="", ylab="", xaxt="n", yaxt="n", bty="n",
 p <- c(0.07942584, 0.01339713, 0.24593301, 0.08229665, 0.02105263,
        0.41913876, 0.13301435, 0.00382775, 0.00191388)
 
-momg <- matrix(sample(seq_along(p), 16, prob=p, replace=TRUE), ncol=2)
-dadg <- matrix(sample(seq_along(p), 16, prob=p, replace=TRUE), ncol=2)
+momg <- matrix(sample(LETTERS[seq_along(p)], 16, prob=p, replace=TRUE), ncol=2)
+dadg <- matrix(sample(LETTERS[seq_along(p)], 16, prob=p, replace=TRUE), ncol=2)
 
-sib1 <- matrix(sample(1:2, 16, replace=TRUE), ncol=2)
-sib2 <- matrix(sample(1:2, 16, replace=TRUE), ncol=2)
+sib1 <- sib1m <- matrix(sample(1:2, 16, replace=TRUE), ncol=2)
+sib2 <- sib2m <- matrix(sample(1:2, 16, replace=TRUE), ncol=2)
 for(i in 1:nrow(sib1)) {
-    sib1[i,1] <- momg[i,sib1[i,1]]
-    sib2[i,1] <- momg[i,sib2[i,1]]
-    sib1[i,2] <- dadg[i,sib1[i,2]]
-    sib2[i,2] <- dadg[i,sib2[i,2]]
+    sib1[i,1] <- momg[i,sib1m[i,1]]
+    sib2[i,1] <- momg[i,sib2m[i,1]]
+    sib1[i,2] <- dadg[i,sib1m[i,2]]
+    sib2[i,2] <- dadg[i,sib2m[i,2]]
 }
 
 k <- 1
