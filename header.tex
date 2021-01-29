@@ -4,6 +4,7 @@
 \usetheme{default}
 \beamertemplatenavigationsymbolsempty
 \hypersetup{pdfpagemode=UseNone} % don't show bookmarks on initial view
+\usepackage[export]{adjustbox}
 
 
 % font
@@ -94,3 +95,5 @@
 \newcommand{\ttfn}{\tt \footnotesize}
 \newcommand{\figh}[2]{\centerline{\includegraphics[height=#2\textheight]{#1}}}
 \newcommand{\figw}[2]{\centerline{\includegraphics[width=#2\textwidth]{#1}}}
+\newcommand{\fighboxed}[2]{\centerline{\includegraphics[frame,height=#2\textheight]{#1}}}
+\newcommand{\figwboxed}[2]{\centerline{\includegraphics[frame,width=#2\textwidth]{#1}}}
