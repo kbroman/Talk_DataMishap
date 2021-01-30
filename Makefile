@@ -6,7 +6,9 @@ FIGS=		 Figs/gh_results_good.pdf \
 
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file
 
-docs/$(LEC).pdf: $(LEC).pdf
+all: docs/$(LEC).pdf docs/$(LEC)_notes.pdf
+
+docs/%.pdf: %.pdf
 	cp $^ $@
 
 $(LEC).pdf: $(LEC).tex header.tex $(FIGS)
