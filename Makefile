@@ -1,7 +1,8 @@
 LEC = data_mishap
 
 FIGS=		 Figs/gh_results_good.pdf \
-			 Figs/sibpairs.pdf
+			 Figs/sibpairs.pdf \
+			 Figs/marshfield_map.png
 
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file
 
@@ -12,6 +13,9 @@ $(LEC).pdf: $(LEC).tex header.tex $(FIGS)
 	xelatex $^
 
 Figs/gh_results_good.pdf: R/plot_gh_results.R
+	cd R;R CMD BATCH $(R_OPTS) $(<F)
+
+Figs/marshfield_map.png: R/wisconsin_map.R
 	cd R;R CMD BATCH $(R_OPTS) $(<F)
 
 Figs/sibpairs.pdf: R/plot_sibships.R
