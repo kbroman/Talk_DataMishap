@@ -1,6 +1,9 @@
 # Data Mishap
 
-Slides for a 5-min talk about a data mishap.
+Slides for a 5-min talk about a data mishap, for a
+[community night](https://www.littlemissdata.com/fdf/datamishapsnight)
+organized by [Caitlin Hudon (@beeonaposy)](https://twitter.com/beeonaposy)
+and [Laura Ellis (@LittleMissData)](https://twitter.com/LittleMissData).
 
 PDF of current version: <https://kbroman.org/Talk_DataMishap>
 
