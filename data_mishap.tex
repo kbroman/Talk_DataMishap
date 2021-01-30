@@ -35,6 +35,9 @@
   \titlepage
 
 \note{
+These are slides for a 5-min talk about a data mishap, for a community
+night (https://www.littlemissdata.com/fdf/datamishapsnight) organized
+by Caitlin Hudon (@beeonaposy) and Laura Ellis (@LittleMissData).
 }
 
 } }
@@ -52,6 +55,11 @@
   \href{https://doi.org/10.1038/ncomms10448}{doi:10.1038/ncomms10448}}
 
 \note{
+   Genome-wide association studies (GWAS) have been a revolution
+   in human genetics. This figure is from a study of 23andMe
+   participants who were asked whether they're a morning person. This
+   binary trait was associated with genotype at markers across the
+   genome, immediately showing genes associated with the trait.
 }
 
 \end{frame}
@@ -71,6 +79,10 @@
   \href{https://doi.org/10.1126/science.2270482}{doi:10.1126/science.2270482}}
 
 \note{
+  Back in the day, gene discovery involved the collection and analysis
+  of large families. This is one of the families from the study that
+  identified the BRCA1 gene. An important insight there was focusing
+  on families with early-onset breast cancer.
 }
 
 \end{frame}
@@ -84,12 +96,10 @@
 \only<2>{\figw{Figs/sibpairs_wdata.pdf}{1.0}}
 
 \note{
-  In the late 1990s, one of ways we tried to identify disease genes
-  was with affected sibling pair studies. You gather a bunch of pairs
-  of siblings who were both affected with a disease, and then get
-  genotype data for them, and look for genomic regions where the
-  affected sibpairs had more similar genotypes than you would expect
-  by chance.
+  In-between, there was a period where we thought we could find
+  disease genes by gathering a moderate number of affected sibling
+  pairs.  You look for regions where affected sibpairs had more
+  similar genotypes than you would expect by chance.
 }
 
 \end{frame}
@@ -98,6 +108,14 @@
 \begin{frame}[c]{Marshfield, Wisconsin}
 
   \figh{Figs/marshfield_map.png}{0.9}
+
+\note{
+  In 1998 I was a postdoc in a genetics lab in Marshfield, WI (2 1/2
+  hours drive north of Madison). My advisor hooked me up with an
+  affected sibpair study on prostate cancer. I did the initial data
+  cleaning and a basic analysis, hoping to wow the famous people
+  involved with my prowess.
+}
 
 \end{frame}
 
@@ -110,17 +128,10 @@
 \figh{Figs/gh_results_bad.pdf}{0.75}
 
 \note{
-  In an affected sib-pair study, we'll scan across the genome; at each
-  point will seek to estimate the proportion of alleles shared IBD
-  between affected siblings and compare that to what is expected for
-  siblings.
-
-  The first such study I was involved in was of prostate cancer, and
-  consisted of maybe 150 affected sibling pairs. This plot (of
-  $-\log_{10}$ p-values) is an approximation of my initial results.
-  We're looking for values around 3, so these were super exciting to
-  me. I distinctly remember faxing these results to my collaborators,
-  thinking ``I am so awesome. I will conquer all diseases.''
+  This plot (of $-\log_{10}$ p-values) is an approximation of my
+  initial results. We're looking for values around 3, so these were
+  super exciting to me: much higher association than I would have
+  expected, and on many more chromosomes than I would have expected.
 }
 
 \end{frame}
@@ -136,6 +147,10 @@
 \hfill
 {\large \color{white} so happy} \hspace*{0.75in}
 
+\note{
+  It was so awesome.
+}
+
 \end{frame}
 
 
@@ -148,6 +163,11 @@
 \bigskip \bigskip
 
 \hfill \scriptsize \href{https://bit.ly/faxpic}{\tt \lolit bit.ly/faxpic}
+
+\note{
+  I immediately faxed my results off to my collaborators.
+  (That's how we shared results with each other in 1998.)
+}
 
 \end{frame}
 
@@ -180,16 +200,12 @@ it probably is.
 \note{
    In this prostate cancer study, the affected sibpairs are all old,
    and there's essentially no data on the parents. In this case,
-   determining the number of alleles shared IBD turns out to be
-   particularly sensitive to the allele frequencies.
+   our method for determining sharing is particularly sensitive to the
+   allele frequencies.
 
-   For example, if they're both 3/3 and 3 is relatively rare, that
-   it's very likely that they're IBD=2. But if 3 is quite common, then
-   they could reasonably be IBD=1 or 0.
-
-   If they both share a 6 allele, is that IBD=1, or IBD=0? If 6 is
-   rare, you'd lean towards IBD=1, but if 6 is common, it could be
-   either.
+   It's not obvious how to estimate the allele frequencies, but also
+   the simple approach I took had a bug that really through things
+   off.
 }
 
 \end{frame}
@@ -223,12 +239,18 @@ it probably is.
 
 \fighboxed{Figs/broman2001.png}{0.8}
 
-\onslide<2>{
+\onslide<2|handout 0>{
 \vspace*{-2in} \hspace*{0.5in}
 \fighboxed{Figs/broman2001_erratum.png}{0.65}
 }
 
 \hfill \scriptsize \href{https://doi.org/10.1002/gepi.2}{\tt \lolit doi:10.1002/gepi.2}
+
+\note{
+  My collaborators were pretty nice about it. And I ended up writing a
+  paper about the problem. That paper also had a major flaw, which is
+  also interesting and instructive, but that's another story.
+}
 
 \end{frame}
 
