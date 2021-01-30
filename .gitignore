@@ -1,9 +1,10 @@
-data_mishap.aux
-data_mishap.log
-data_mishap.nav
-data_mishap.out
-data_mishap.pdf
-data_mishap.snm
-data_mishap.toc
+data_mishap_notes.tex
+*.aux
+*.log
+*.nav
+*.out
+*.pdf
+*.snm
+*.toc
 Analysis/
 Figs/
