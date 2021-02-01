@@ -1,7 +1,7 @@
 # Data Mishap
 
 Slides for a 5-min talk about a data mishap, for a
-[community night](https://www.littlemissdata.com/fdf/datamishapsnight)
+[Data Mishaps community night](https://datamishapsnight.com/)
 organized by [Caitlin Hudon (@beeonaposy)](https://twitter.com/beeonaposy)
 and [Laura Ellis (@LittleMissData)](https://twitter.com/LittleMissData).
 
