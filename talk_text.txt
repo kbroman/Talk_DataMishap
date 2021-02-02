@@ -1,0 +1,36 @@
+Genome-wide association studies have been huge for human genetics.
+This figure is from a 23andme study, associating markers across the genome with self-report of being a morning person. Many genes show very strong association.
+
+Back in the day, we used large families to find genes.
+This is one of the families used to find the BRCA1 gene.
+An important insight in that study was to focus on women with early-onset breast cancer.
+
+In-between, there was a period where we thought we could just collect a bunch of pairs of siblings both affected by a disease.
+
+The idea was to look for regions where affected sibpairs shared more alleles than you'd expect. From each parent, the sibpair has half a chance of getting the same allele.
+
+The sibpair in the top left got the same C from their dad; we’re not sure whether they got the same allele from their mom or not.
+
+In 1998 I was a postdoc in Marshfield, Wisconsin, a couple of hours north of Madison, where I live now. I got involved in a sibpair study of prostate cancer. I was to do some initial data cleaning and analysis. I was hoping that I'd be able to show off my skills and be invited to do more.
+
+And my initial results were fabulous. The original figure is lost, but I was able to reconstruct it. The y-axis here is the -log p-value; adjusting for multiple testing, we're looking for values bigger than about 3.5 or 4, and we have a whole bunch of chromosomes showing association. Almost all of the chromosomes, actually.
+
+I distinctly remember the feeling. I was going to be huge.
+
+I quickly faxed my results off to my collaborators. That's how we did it in 1998: fax machine. But, immediately afterwards I started to have some misgivings.
+
+And the lesson here is: If it seems too good to be true, it probably is.
+
+You see, this was just 150 sibpairs with prostate cancer. And they were all old men so there was no data on their parents.
+
+The analysis turns out to be sensitive to the estimates of the frequencies of alleles.
+
+Like, for the pair in the two-left: does this pair share two alleles, or is the C allele just common? It was not obvious how to estimate the allele frequencies in this case, and anyway my code had a bug that really screwed them up.
+
+Here are the corrected results. There is still a hint of a couple of loci, but not nearly so dramatic. And actually, this is about what you should expect, given the limited extent of data.
+
+My collaborators were pretty nice about it. And it ended up inspiring some more work and a paper.
+
+That also had an error, but that's another story.
+
+So, my lesson from this was: if your results seem too good to be true, they probably are.
