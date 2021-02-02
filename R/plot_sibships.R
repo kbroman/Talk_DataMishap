@@ -108,6 +108,34 @@ for(x in seq(0, 80, length=4)) {
 dev.off()
 
 
+pdf("../Figs/sibpairs_wdata_hilit.pdf", width=9.75, height=5.5, pointsize=12)
+par(mar=rep(0.1, 4))
+plot(0, 0, type="n", xlab="", ylab="", xaxt="n", yaxt="n", bty="n",
+     xlim=c(0, 100), ylim=c(0,20))
+
+for(i in 1:nrow(sib1)) {
+    sib1[i,1] <- momg[i,sib1m[i,1]]
+    sib2[i,1] <- momg[i,sib2m[i,1]]
+    sib1[i,2] <- dadg[i,sib1m[i,2]]
+    sib2[i,2] <- dadg[i,sib2m[i,2]]
+}
+
+k <- 1
+for(x in seq(0, 80, length=4)) {
+    for(y in c(0, 10)) {
+        plot_sibship(x=3+x, y=18-y, cex=8, dy=5, dx=10,
+                     sib1_female=sib1_female[k],
+                     sib2_female=sib2_female[k])
+        plot_geno(x=3+x, y=18-y, dy=5, dx=10,
+                  geno=rbind(momg[k,], dadg[k,], sib1[k,], sib2[k,]),
+                  cex=1.8, col=ifelse(k==1, "#ff0080", "black"))
+
+        k <- k + 1
+
+    }
+}
+dev.off()
+
 pdf("../Figs/sibpairs_nopar.pdf", width=9.75, height=5.5, pointsize=12)
 par(mar=rep(0.1, 4))
 plot(0, 0, type="n", xlab="", ylab="", xaxt="n", yaxt="n", bty="n",
@@ -142,6 +170,28 @@ for(x in seq(0, 80, length=4)) {
         plot_geno(x=3+x, y=18-y, dy=5, dx=10,
                   geno=rbind(momg[k,], dadg[k,], sib1[k,], sib2[k,]),
                   cex=1.8)
+
+        k <- k + 1
+
+    }
+}
+dev.off()
+
+
+pdf("../Figs/sibpairs_nopar_wdata_hilit.pdf", width=9.75, height=5.5, pointsize=12)
+par(mar=rep(0.1, 4))
+plot(0, 0, type="n", xlab="", ylab="", xaxt="n", yaxt="n", bty="n",
+     xlim=c(0, 100), ylim=c(0,20))
+
+k <- 1
+for(x in seq(0, 80, length=4)) {
+    for(y in c(0, 10)) {
+        plot_sibship(x=3+x, y=18-y, cex=8, dy=5, dx=10,
+                     sib1_female=FALSE, sib2_female=FALSE,
+                     dead=c(TRUE,TRUE,FALSE,FALSE))
+        plot_geno(x=3+x, y=18-y, dy=5, dx=10,
+                  geno=rbind(momg[k,], dadg[k,], sib1[k,], sib2[k,]),
+                  cex=1.8, col=ifelse(k==1, "#ff0080", "black"))
 
         k <- k + 1
 
