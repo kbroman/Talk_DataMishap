@@ -9,7 +9,7 @@ PDF of slides: <https://kbroman.org/Talk_DataMishap>
 
 PDF of slides with notes: <https://kbroman.org/Talk_DataMishap/data_mishap_notes.pdf>
 
-Text of what I plan to say: [talk_text.txt](talk_text.txt)
+Text of what I plan to say: [talk_text.md](talk_text.md)
 
 See also [lecture 10 (Model misspecification: estimating allele frequencies)](https://kbroman.org/AdvData/10_allelefreq_notes.pdf)
 from the course [Advanced data analysis](https://kbroman.org/AdvData/).
