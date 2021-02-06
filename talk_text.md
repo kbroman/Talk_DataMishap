@@ -13,10 +13,10 @@ Consider the sibpair in the top left. They got the same C from their dad; we’r
 
 In 1998 I was a postdoc in Marshfield, Wisconsin, a couple of hours north of Madison, where I live now. My advisor hooked me into a sibpair study of prostate cancer. I was to do some initial data cleaning and a basic analysis. I was hoping to show off my skills and be invited to do more.
 
-And my initial results were amazing ... way better than I'd have imagined. I don't have the original figure, but I still have the data, and so this is a reconstruction. The y-axis here is the -log p-value. We're looking for values bigger than about 3.5 or 4, and we have a whole bunch of chromosomes showing association. Almost all of the chromosomes, actually.
+And my initial results were amazing. I don't have the original figure, but I still have the data, and so this is a reconstruction. The y-axis is the -log p-value. Adjusting for the genome scan, we're looking for values bigger than about 3.5 or 4, and we have a whole bunch of chromosomes showing strong association. Almost all of the chromosomes, actually.
 
 When I saw these results, I was like:
-I am so awesome and powerful. I am going to be huge.
+I am so awesome. I am going to be huge.
 
 I quickly faxed my results off to my collaborators. That's how we did it in 1998: fax machine. This is also a reconstruction.
 But, immediately afterwards I started to have some misgivings.
